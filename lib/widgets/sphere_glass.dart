@@ -28,7 +28,7 @@ class _SphereGlassState extends State<SphereGlass> {
           Alignment(widget.lightSource.dx, widget.lightSource.dy),
           colors: const [
             Color.fromARGB(255, 212, 232, 247),
-            Color.fromARGB(186, 111, 166, 182),
+            Color.fromARGB(121, 19, 99, 142),
           ],
         ),
       ),

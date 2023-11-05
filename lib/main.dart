@@ -31,12 +31,15 @@ with SingleTickerProviderStateMixin{
     return MaterialApp(
         title: 'Christmas Ball',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          //primarySwatch: Colors.blue,
           //scaffoldBackgroundColor: Colors.blueGrey
         ),
         home: Scaffold(
+            extendBodyBehindAppBar: true,
             appBar: AppBar(
-              title: const Text('Ask me anything:'),
+              title: const Text('Ask me anything & shake your phone:'),
+              elevation: 0,
+              backgroundColor: Colors.transparent,
             ),
             body: Stack(
             children: [
@@ -47,7 +50,7 @@ with SingleTickerProviderStateMixin{
               decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                  'assets/images/ball.png',
+                  'assets/images/balls.png',
                 ),
                 fit: BoxFit.cover,
               ),
@@ -58,7 +61,7 @@ with SingleTickerProviderStateMixin{
               Padding(
                 padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.20),
                 child: Container(
-                  margin: const EdgeInsets.all(8),
+                  margin: const EdgeInsets.all(28),
                   child: const Column(
                     children: [
                         SphereGlass(diameter: 0, lightSource: Offset(0, 2), 
