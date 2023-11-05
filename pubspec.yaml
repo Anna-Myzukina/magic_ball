@@ -15,6 +15,7 @@ dependencies:
   shake: ^2.2.0
   snowfall: ^0.0.2
   animated_text_kit: ^4.2.2
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:

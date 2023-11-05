@@ -4,7 +4,6 @@ import 'package:magic_ball/utilities/snow_animation.dart';
 import 'package:magic_ball/widgets/sphere.dart';
 import 'package:magic_ball/widgets/sphere_glass.dart';
 //import 'package:snowfall/snowfall.dart';
-import 'package:shake/shake.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,7 +57,6 @@ with SingleTickerProviderStateMixin{
             ),
             ),
           const SnowWidget(),
-
               Padding(
                 padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.20),
                 child: Container(
@@ -67,11 +65,10 @@ with SingleTickerProviderStateMixin{
                     children: [
                         SphereGlass(diameter: 0, lightSource: Offset(0, 2), 
                         childSphere: Column(),),
-                        SphereWidget(),
-                          
+                        SphereWidget(),               
                     ],
                   )
-                          ),
+                ),
               )
             ],)
         )
