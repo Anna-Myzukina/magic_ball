@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
 class Triangle extends StatelessWidget {
@@ -9,26 +10,71 @@ class Triangle extends StatelessWidget {
     return CustomPaint(
       painter: _TrianglePainter(),
       child: Center(
-        child: Text(
-          answer ?? '',
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-            shadows: [
-              Shadow(
-              offset: Offset(10.0, 10.0),
-              blurRadius: 4.0,
-              color: Color.fromARGB(255, 0, 0, 0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.4,
+              child: DefaultTextStyle(
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                    shadows: [
+                      Shadow(
+                      offset: Offset(10.0, 10.0),
+                      blurRadius: 4.0,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    ),
+                    Shadow(
+                      offset: Offset(10.0, 10.0),
+                      blurRadius: 8.0,
+                      color: Color.fromARGB(125, 0, 0, 255),
+                    ),
+                    ],
+                    color: Colors.white,
+                    fontSize: 26,
+                    fontWeight: FontWeight.w800
+                  ),
+                child: AnimatedTextKit(
+                  pause: const Duration(milliseconds: 3000),
+                  totalRepeatCount: 2,
+                  stopPauseOnTap: true,
+                  animatedTexts: [
+                    TyperAnimatedText('Thinking about what are you worring',
+                    textStyle: const TextStyle(
+                      fontSize: 28.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    speed: const Duration(milliseconds: 500),),
+                    TyperAnimatedText('Asking your question'),
+                    TyperAnimatedText('After shake your phone'),
+                    TyperAnimatedText('Waiting for my unswer'),
+                    TyperAnimatedText('I\'ll be happy to help'),
+                    TyperAnimatedText('')
+              
+                  ]
+                  //answer ?? '',
+                  // textAlign: TextAlign.center,
+                  // style: const TextStyle(
+                  //   shadows: [
+                  //     Shadow(
+                  //     offset: Offset(10.0, 10.0),
+                  //     blurRadius: 4.0,
+                  //     color: Color.fromARGB(255, 0, 0, 0),
+                  //   ),
+                  //   Shadow(
+                  //     offset: Offset(10.0, 10.0),
+                  //     blurRadius: 8.0,
+                  //     color: Color.fromARGB(125, 0, 0, 255),
+                  //   ),
+                  //   ],
+                  //   color: Colors.white,
+                  //   fontSize: 22,
+                  //   fontWeight: FontWeight.w800
+                  // ),
+                ),
+              ),
             ),
-            Shadow(
-              offset: Offset(10.0, 10.0),
-              blurRadius: 8.0,
-              color: Color.fromARGB(125, 0, 0, 255),
-            ),
-            ],
-            color: Colors.white,
-            fontSize: 42,
-            fontWeight: FontWeight.w800
-          ),
+          ],
         ),
       ),
     );

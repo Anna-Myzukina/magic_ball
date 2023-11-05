@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-//import 'package:magic_ball/utilities/snow_animation.dart';
 import 'package:magic_ball/widgets/sphere_in_the_middle.dart';
 import 'package:magic_ball/widgets/sphere_glass.dart';
-//import 'package:magic_ball/widgets/sphere_shadow.dart';
 import 'package:magic_ball/widgets/triangle.dart';
-//import 'package:magic_ball/widgets/sphere_shadow.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class SphereWidget extends StatefulWidget {
   const SphereWidget({super.key});
@@ -34,7 +32,7 @@ class _SphereWidgetState extends State<SphereWidget> {
               transform: Matrix4.identity()..scale(0.5),
               child: const SphereInTheMiddle(
                 lightSource: lightSource,
-                childWidget: Triangle(answer: 'YES',),
+                childWidget: Triangle(answer: 'Asking your question',),
               ),
             )
         ),

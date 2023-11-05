@@ -4,6 +4,7 @@ import 'package:magic_ball/utilities/snow_animation.dart';
 import 'package:magic_ball/widgets/sphere.dart';
 import 'package:magic_ball/widgets/sphere_glass.dart';
 //import 'package:snowfall/snowfall.dart';
+import 'package:shake/shake.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,9 +38,9 @@ with SingleTickerProviderStateMixin{
         home: Scaffold(
             extendBodyBehindAppBar: true,
             appBar: AppBar(
-              title: const Text('Ask me anything & shake your phone:'),
+              title: const Text('Hi! I\'m magic Christmas ball'),
               elevation: 0,
-              backgroundColor: Colors.transparent,
+              backgroundColor: const Color.fromARGB(168, 59, 110, 164),
             ),
             body: Stack(
             children: [
