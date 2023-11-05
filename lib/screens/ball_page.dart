@@ -13,8 +13,8 @@ class BallPage extends StatelessWidget {
         backgroundColor: Colors.blue.shade900,
         title: const Text('Ask Me Anything'),
       ),
-      body: SnowfallWidget(
-        child: const BallWidget()),
+      body: const SnowfallWidget(
+        child: BallWidget()),
     );
   }
 }
