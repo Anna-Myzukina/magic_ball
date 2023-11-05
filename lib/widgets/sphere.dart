@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 //import 'package:magic_ball/utilities/snow_animation.dart';
-import 'package:magic_ball/widgets/shpere_border.dart';
+import 'package:magic_ball/widgets/sphere_in_the_middle.dart';
 import 'package:magic_ball/widgets/sphere_glass.dart';
+//import 'package:magic_ball/widgets/sphere_shadow.dart';
+import 'package:magic_ball/widgets/triangle.dart';
 //import 'package:magic_ball/widgets/sphere_shadow.dart';
 
 class SphereWidget extends StatefulWidget {
@@ -28,9 +30,11 @@ class _SphereWidgetState extends State<SphereWidget> {
             diameter: size.shortestSide,
 
             childSphere: Transform(
+              origin: size.center(const Offset(0, -0.75)),
               transform: Matrix4.identity()..scale(0.5),
-              child: const SphereBorder(
+              child: const SphereInTheMiddle(
                 lightSource: lightSource,
+                childWidget: Triangle(answer: 'YES',),
               ),
             )
         ),

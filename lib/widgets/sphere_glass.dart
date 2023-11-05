@@ -32,7 +32,7 @@ class _SphereGlassState extends State<SphereGlass> {
           ],
         ),
       ),
-      //child: this.widget.childSphere,
+      child: widget.childSphere,
     );
   }
 }
